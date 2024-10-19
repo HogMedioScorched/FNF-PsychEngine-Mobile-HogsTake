@@ -19,6 +19,8 @@ import haxe.Json;
 
 import lime.utils.Assets;
 
+import flixel.util.FlxSpriteUtil;
+
 class FreeplayState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
@@ -477,7 +479,7 @@ class FreeplayState extends MusicBeatState
 		}
 		else if((FlxG.keys.justPressed.R || touchPad.buttonD.justPressed) && !player.playingMusic)
 		{
-			curSelected = FlxG.random(0, songs.length - 1);
+			curSelected = FlxG.random.int(0, songs.length - 1);
 			changeSelection();
 		}
 
