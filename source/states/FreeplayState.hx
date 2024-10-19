@@ -477,7 +477,7 @@ class FreeplayState extends MusicBeatState
 			removeTouchPad();
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 		}
-		else if((FlxG.keys.justPressed.R || touchPad.buttonD.justPressed) && !player.playingMusic)
+		else if((FlxG.keys.justPressed.D || touchPad.buttonD.justPressed) && !player.playingMusic)
 		{
 			curSelected = FlxG.random.int(0, songs.length - 1);
 			changeSelection();
@@ -609,7 +609,7 @@ class FreeplayState extends MusicBeatState
 		{
 			var item:Alphabet = grpSongs.members[i];
 			item.visible = item.active = true;
-			item.x = ((item.width+150)/2)-(FlxG.width/2);
+			item.x = (FlxG.width/2)-((item.width+150/2));
 			item.y = ((item.targetY - lerpSelected) * 1.3 * item.distancePerItem.y) + item.startPosition.y;
 
 			var icon:HealthIcon = iconArray[i];
