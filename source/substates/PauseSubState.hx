@@ -387,6 +387,7 @@ class PauseSubState extends MusicBeatSubstate
 		for (num => item in grpMenuShit.members)
 		{
 			item.targetY = num - curSelected;
+			item.screenCenter(X)
 			item.alpha = 0.6;
 			if (item.targetY == 0)
 			{
@@ -416,7 +417,6 @@ class PauseSubState extends MusicBeatSubstate
 			var item = new Alphabet(90, 320, Language.getPhrase('pause_$str', str), true);
 			item.isMenuItem = true;
 			item.targetY = num;
-			item.screenCenter(X);
 			grpMenuShit.add(item);
 
 			if(str == 'Skip Time')
