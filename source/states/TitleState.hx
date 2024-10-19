@@ -59,7 +59,7 @@ class TitleState extends MusicBeatState
 
 	#if TITLE_SCREEN_EASTER_EGG
 	final easterEggKeys:Array<String> = [
-		'HOGOSOKRIKOSO', 'MARTILLO', 'BAMBINO', 'PEPPENO'
+		'SHADOW', 'RIVEREN', 'BBPANZU', 'PESSY'
 	];
 	final allowedKeys:String = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	var easterEggKeysBuffer:String = '';
@@ -142,7 +142,6 @@ class TitleState extends MusicBeatState
 			startIntro();
 		}
 		#end
-		addTouchPad('LEFT_FULL', 'NONE');
 	}
 
 	var logoBl:FlxSprite;
@@ -305,30 +304,35 @@ class TitleState extends MusicBeatState
 		var easterEgg:String = FlxG.save.data.psychDevsEasterEgg;
 		switch(easterEgg.toUpperCase())
 		{
-			case 'HOGOSO':
-				characterImage = 'mortadela';
-				animationName = 'mortadela';
+			case 'SHADOW':
+				characterImage = 'ShadowBump';
+				animationName = 'Shadow Title Bump';
 				gfPosition.x += 210;
 				gfPosition.y += 40;
 				useIdle = true;
-			case 'MARTILLO':
-				characterImage = 'Martenan';
-				animationName = 'ESELMARTILLOESREAL';
+			case 'RIVEREN':
+				characterImage = 'ZRiverBump';
+				animationName = 'River Title Bump';
 				gfPosition.x += 180;
 				gfPosition.y += 40;
 				useIdle = true;
-			case 'BAMBINO':
-				characterImage = 'BambinoBump';
-				animationName = 'EsUnPendejoRecargado';
+			case 'BBPANZU':
+				characterImage = 'BBBump';
+				animationName = 'BB Title Bump';
+				danceLeftFrames = [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
+				danceRightFrames = [27, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 				gfPosition.x += 45;
 				gfPosition.y += 100;
-			case 'PEPPENO':
-				characterImage = 'PeppenoBump';
-				animationName = 'SABETUSGENOCIDIOS';
+			case 'PESSY':
+				characterImage = 'PessyBump';
+				animationName = 'Pessy Title Bump';
 				gfPosition.x += 165;
 				gfPosition.y += 60;
+				danceLeftFrames = [29, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+				danceRightFrames = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
 		}
 	}
+
 	function getIntroTextShit():Array<Array<String>>
 	{
 		#if MODS_ALLOWED
@@ -355,8 +359,7 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if(logoBl != null)
-			logoBl.angle += 1
+                logoBl.angle += 1
 		
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
@@ -531,6 +534,9 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
+		if(logoBl != null)
+			logoBl.animation.play('bump', true);
+
 		if(gfDance != null)
 		{
 			danceLeft = !danceLeft;
@@ -604,13 +610,13 @@ class TitleState extends MusicBeatState
 				var sound:FlxSound = null;
 				switch(easteregg)
 				{
-					case 'HOGOSOKRIKOSO':
+					case 'RIVEREN':
 						sound = FlxG.sound.play(Paths.sound('JingleRiver'));
-					case 'MARTILLO':
+					case 'SHADOW':
 						FlxG.sound.play(Paths.sound('JingleShadow'));
-					case 'BAMBINO':
+					case 'BBPANZU':
 						sound = FlxG.sound.play(Paths.sound('JingleBB'));
-					case 'PEPPENO':
+					case 'PESSY':
 						sound = FlxG.sound.play(Paths.sound('JinglePessy'));
 
 					default: //Go back to normal ugly ass boring GF
@@ -625,7 +631,7 @@ class TitleState extends MusicBeatState
 				}
 
 				transitioning = true;
-				if(easteregg == 'HOGOSOKRIKOSO')
+				if(easteregg == 'SHADOW')
 				{
 					new FlxTimer().start(3.2, function(tmr:FlxTimer)
 					{
@@ -644,7 +650,7 @@ class TitleState extends MusicBeatState
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
 						transitioning = false;
-						if(easteregg == 'PEPPENO')
+						if(easteregg == 'PESSY')
 							Achievements.unlock('pessy_easter_egg');
 					};
 				}
@@ -659,7 +665,7 @@ class TitleState extends MusicBeatState
 				if (easteregg == null) easteregg = '';
 				easteregg = easteregg.toUpperCase();
 				#if TITLE_SCREEN_EASTER_EGG
-				if(easteregg == 'HOGOSOKRIKOSO')
+				if(easteregg == 'SHADOW')
 				{
 					FlxG.sound.music.fadeOut();
 					if(FreeplayState.vocals != null)
