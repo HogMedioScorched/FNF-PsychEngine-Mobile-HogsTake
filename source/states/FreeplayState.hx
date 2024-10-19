@@ -264,7 +264,7 @@ class FreeplayState extends MusicBeatState
 		if (!player.playingMusic)
 		{
 			scoreText.text = Language.getPhrase('personal_best', 'PERSONAL BEST: {1} ({2}%)', [lerpScore, ratingSplit.join('.')]);
-			songIndexText.text = 'SONG: ' + (curSelected + 1) + '/' + songs.length
+			songIndexText.text = 'SONG: ' + (curSelected + 1) + '/' + songs.length;
 			positionHighscore();
 			
 			if(songs.length > 1)
