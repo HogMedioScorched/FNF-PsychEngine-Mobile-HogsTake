@@ -59,7 +59,7 @@ class TitleState extends MusicBeatState
 
 	#if TITLE_SCREEN_EASTER_EGG
 	final easterEggKeys:Array<String> = [
-		'SHADOW', 'RIVEREN', 'BBPANZU', 'PESSY'
+		'SHADOW', 'RIVEREN', 'BBPANZU', 'YAYAMIJOYA'
 	];
 	final allowedKeys:String = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	var easterEggKeysBuffer:String = '';
@@ -323,13 +323,11 @@ class TitleState extends MusicBeatState
 				danceRightFrames = [27, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 				gfPosition.x += 45;
 				gfPosition.y += 100;
-			case 'PESSY':
-				characterImage = 'PessyBump';
-				animationName = 'Pessy Title Bump';
+			case 'YAYAMIJOYA':
+				characterImage = 'bollysabedondevives';
+				animationName = 'pasa tus datos para la cuenta';
 				gfPosition.x += 165;
 				gfPosition.y += 60;
-				danceLeftFrames = [29, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-				danceRightFrames = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
 		}
 	}
 
@@ -561,10 +559,10 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					createCoolText(['Psych Engine by'], 40);
+					createCoolText(['Krikoso Engine by'], 40);
 				case 4:
-					addMoreText('Shadow Mario', 40);
-					addMoreText('Riveren', 40);
+					addMoreText('Hog Medio Scorched', 40);
+					addMoreText('Y un monton de pendejos', 40);
 				case 5:
 					deleteCoolText();
 				case 6:
@@ -617,8 +615,8 @@ class TitleState extends MusicBeatState
 						FlxG.sound.play(Paths.sound('JingleShadow'));
 					case 'BBPANZU':
 						sound = FlxG.sound.play(Paths.sound('JingleBB'));
-					case 'PESSY':
-						sound = FlxG.sound.play(Paths.sound('JinglePessy'));
+					case 'YAYAMIJOYA':
+						sound = FlxG.sound.play(Paths.sound('boommijo'));
 
 					default: //Go back to normal ugly ass boring GF
 						remove(ngSpr);
@@ -651,7 +649,7 @@ class TitleState extends MusicBeatState
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
 						transitioning = false;
-						if(easteregg == 'PESSY')
+						if(easteregg == 'YAYAMIJOYA')
 							Achievements.unlock('pessy_easter_egg');
 					};
 				}
