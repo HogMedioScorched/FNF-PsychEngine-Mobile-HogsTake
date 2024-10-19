@@ -1,20 +1,20 @@
-Português (Brasil)
+Español (Traductor de google) BETA
 
 // Gameplay
-score_text: "Pontos: {1} | Erros: {2} | Avaliação: {3}"
-score_text_instakill: "Pontos: {1} | Avaliação: {2}"
+score_text: "Agujas: {1} | Errores: {2} | Evaluación: {3}"
+score_text_instakill: "Agujas: {1} | Evaluación: {2}"
 botplay: "Automático"
 
-rating_you_suck: "Que Horrível!"
-rating_shit: "Merda"
-rating_bad: "Ruim"
+rating_you_suck: "¡Qué horrible!"
+rating_shit: "Mierda"
+rating_bad: "Espacioso"
 rating_bruh: "Mal"
-rating_meh: "Meh"
+rating_meh: "Bueno"
 rating_nice: "Decente"
-rating_good: "Bom"
-rating_great: "Ótimo"
+rating_good: "bueno"
+rating_great: "Excelente"
 rating_sick: "Manda Ver!"
-rating_perfect: "Perfeito!!"
+rating_perfect: "¡¡Perfecto!!"
 
 // Dialogues
 dialogue_skip: "Aperte BACK para Pular"
