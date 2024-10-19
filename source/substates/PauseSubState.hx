@@ -387,7 +387,7 @@ class PauseSubState extends MusicBeatSubstate
 		for (num => item in grpMenuShit.members)
 		{
 			item.targetY = num - curSelected;
-			item.screenCenter(X)
+			item.screenCenter(X);
 			item.alpha = 0.6;
 			if (item.targetY == 0)
 			{
