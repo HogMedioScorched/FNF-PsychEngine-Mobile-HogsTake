@@ -359,7 +359,7 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-                logoBl.angle += 1
+                logoBl.angle += 1;
 		
 		if (FlxG.sound.music != null) {
 			Conductor.songPosition = FlxG.sound.music.time;
