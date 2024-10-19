@@ -38,6 +38,9 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			['Krikoso Engine Team'],
+			['Hog Medio Scorched',			'hog',             'Creator of this shit',                       'https://youtube.com/@HogMedioScorchedh',		'0000AA'],
+			['Peppeno (Es Alguien Waos)',			'bolly',			'Supporter',						'https://youtube.com/@Es_alguien123',		'AA7700'],
 			['Mobile Porting Team'],
 			['mcagabe19',			'lily',             'Head Porter of Psych Engine and Author of linc_luajit-rewriten',                       'https://youtube.com/@mcagabe19',		'FFE7C0'],
 			['Karim Akra',			'karim',			'Second Porter of Psych Engine',						'https://youtube.com/@Karim0690',		'FFB4F0'],
