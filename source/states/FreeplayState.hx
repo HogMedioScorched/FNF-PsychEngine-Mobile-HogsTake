@@ -477,8 +477,8 @@ class FreeplayState extends MusicBeatState
 		}
 		else if((FlxG.keys.justPressed.R || touchPad.buttonD.justPressed) && !player.playingMusic)
 		{
-			curSelected = FlxG.random(0, songs.length - 1)
-			changeSelection()
+			curSelected = FlxG.random(0, songs.length - 1);
+			changeSelection();
 		}
 
 		updateTexts(elapsed);
