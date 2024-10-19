@@ -142,6 +142,7 @@ class TitleState extends MusicBeatState
 			startIntro();
 		}
 		#end
+		addTouchPad('LEFT_FULL', 'NONE');
 	}
 
 	var logoBl:FlxSprite;
