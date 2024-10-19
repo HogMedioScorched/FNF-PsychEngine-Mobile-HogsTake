@@ -2,6 +2,6 @@
 <TextureAtlas imagePath="bollysabedondevives.png">
 	<!-- Created using the Spritesheet and XML generator -->
 	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="dame tus datos para la cuenta0000" x="0" y="222" width="288" height="245" frameX="-219" frameY="-405" frameWidth="720" frameHeight="720"/>
-	<SubTexture name="dame tus datos para la cuenta0001" x="0" y="0" width="323" height="222" frameX="-200" frameY="-428" frameWidth="720" frameHeight="720"/>
+	<SubTexture name="pasa tus datos para la cuenta0000" x="0" y="222" width="288" height="245" frameX="-219" frameY="-405" frameWidth="480" frameHeight="480"/>
+	<SubTexture name="pasa tus datos para la cuenta0001" x="0" y="0" width="323" height="222" frameX="-200" frameY="-428" frameWidth="480" frameHeight="480"/>
 </TextureAtlas>
