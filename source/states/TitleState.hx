@@ -328,7 +328,7 @@ class TitleState extends MusicBeatState
 				gfPosition.x += 165;
 				gfPosition.y += 60;
 		}
-
+	}
 	function getIntroTextShit():Array<Array<String>>
 	{
 		#if MODS_ALLOWED
