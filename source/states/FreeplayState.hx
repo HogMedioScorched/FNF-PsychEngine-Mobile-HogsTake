@@ -609,7 +609,7 @@ class FreeplayState extends MusicBeatState
 		{
 			var item:Alphabet = grpSongs.members[i];
 			item.visible = item.active = true;
-			item.x = ((item.targetY+150)/2)-(FlxG.width/2);
+			item.x = ((item.width+150)/2)-(FlxG.width/2);
 			item.y = ((item.targetY - lerpSelected) * 1.3 * item.distancePerItem.y) + item.startPosition.y;
 
 			var icon:HealthIcon = iconArray[i];
