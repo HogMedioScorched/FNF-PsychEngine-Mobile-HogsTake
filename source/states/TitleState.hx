@@ -19,6 +19,8 @@ import states.StoryMenuState;
 import states.OutdatedState;
 import states.MainMenuState;
 
+addTouchPad('LEFT_RIGHT', 'NONE');
+
 typedef TitleData =
 {
 	var titlex:Float;
