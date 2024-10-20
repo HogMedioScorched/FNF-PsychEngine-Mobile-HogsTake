@@ -76,7 +76,7 @@ class TitleState extends MusicBeatState
 
 		if(!initialized)
 		{
-			addTouchPad('LEFT_RIGHT', 'NONE');
+			addTouchPad('LEFT_FULL', 'NONE');
 			ClientPrefs.loadPrefs();
 			Language.reloadPhrases();
 		}
