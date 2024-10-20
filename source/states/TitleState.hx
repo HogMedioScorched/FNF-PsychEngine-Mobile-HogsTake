@@ -622,6 +622,8 @@ class TitleState extends MusicBeatState
 						sound = FlxG.sound.play(Paths.sound('JingleBB'));
 					case 'YAYAMIJOYA':
 						sound = FlxG.sound.play(Paths.sound('boommijo'));
+					case 'CHES':
+						sound = FlxG.sound.play(Paths.sound('queso'));
 
 					default: //Go back to normal ugly ass boring GF
 						remove(ngSpr);
