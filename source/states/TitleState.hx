@@ -76,7 +76,6 @@ class TitleState extends MusicBeatState
 
 		if(!initialized)
 		{
-			addTouchPad('LEFT_FULL', 'NONE');
 			ClientPrefs.loadPrefs();
 			Language.reloadPhrases();
 		}
@@ -142,6 +141,7 @@ class TitleState extends MusicBeatState
 			startIntro();
 		}
 		#end
+	        addTouchPad('LEFT_FULL', 'NONE');
 	}
 
 	var logoBl:FlxSprite;
