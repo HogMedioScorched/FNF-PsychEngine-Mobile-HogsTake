@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cheese.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="omagad0000" x="0" y="858" width="571" height="357" frameX="-140" frameY="-257" frameWidth="720" frameHeight="720"/>
+	<SubTexture name="omagad0001" x="0" y="458" width="586" height="400" frameX="-125" frameY="-214" frameWidth="720" frameHeight="720"/>
+	<SubTexture name="omagad0002" x="646" y="0" width="646" height="458" frameX="-65" frameY="-156" frameWidth="720" frameHeight="720"/>
+	<SubTexture name="omagad0003" x="571" y="858" width="571" height="357" frameX="-9" frameY="-257" frameWidth="720" frameHeight="720"/>
+	<SubTexture name="omagad0004" x="586" y="458" width="586" height="400" frameX="-9" frameY="-214" frameWidth="720" frameHeight="720"/>
+	<SubTexture name="omagad0005" x="0" y="0" width="646" height="458" frameX="-9" frameY="-156" frameWidth="720" frameHeight="720"/>
+</TextureAtlas>
