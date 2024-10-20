@@ -59,7 +59,7 @@ class TitleState extends MusicBeatState
 
 	#if TITLE_SCREEN_EASTER_EGG
 	final easterEggKeys:Array<String> = [
-		'SHADOW', 'RIVEREN', 'BBPANZU', 'YAYAMIJOYA'
+		'SHADOW', 'RIVEREN', 'BBPANZU', 'YAYAMIJOYA', 'CHES'
 	];
 	final allowedKeys:String = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	var easterEggKeysBuffer:String = '';
@@ -326,6 +326,11 @@ class TitleState extends MusicBeatState
 			case 'YAYAMIJOYA':
 				characterImage = 'bollysabedondevives';
 				animationName = 'pasa tus datos para la cuenta';
+				gfPosition.x += 165;
+				gfPosition.y += 60;
+	                case 'CHES':
+				characterImage = 'cheese';
+				animationName = 'omagad';
 				gfPosition.x += 165;
 				gfPosition.y += 60;
 		}
