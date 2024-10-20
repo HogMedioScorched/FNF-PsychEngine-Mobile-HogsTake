@@ -18,9 +18,6 @@ import shaders.ColorSwap;
 import states.StoryMenuState;
 import states.OutdatedState;
 import states.MainMenuState;
-
-addTouchPad('LEFT_RIGHT', 'NONE');
-
 typedef TitleData =
 {
 	var titlex:Float;
@@ -79,6 +76,7 @@ class TitleState extends MusicBeatState
 
 		if(!initialized)
 		{
+			addTouchPad('LEFT_RIGHT', 'NONE');
 			ClientPrefs.loadPrefs();
 			Language.reloadPhrases();
 		}
@@ -88,7 +86,7 @@ class TitleState extends MusicBeatState
 		#if CHECK_FOR_UPDATES
 		if(ClientPrefs.data.checkForUpdates && !closedState) {
 			trace('checking for update');
-			var http = new haxe.Http("https://raw.githubusercontent.com/MobilePorting/FNF-PsychEngine-Mobile/main/gitVersion.txt");
+			var http = new haxe.Http("https://raw.githubusercontent.com/HogMedioScorched/FNF-PsychEngine-Mobile-HogsTake/main/gitVersion.txt");
 
 			http.onData = function (data:String)
 			{
