@@ -158,7 +158,7 @@ class FreeplayState extends MusicBeatState
 		diffText.font = scoreText.font;
 		add(diffText);
 
-		songIndexText = new FlxText(0, 0, 0, "", 24);
+		songIndexText = new FlxText(5, 5, 0, "", 24);
 		songIndexText.font = scoreText.font;
 		add(songIndexText);
 
@@ -609,7 +609,8 @@ class FreeplayState extends MusicBeatState
 		{
 			var item:Alphabet = grpSongs.members[i];
 			item.visible = item.active = true;
-			item.x = (FlxG.width/2)-((item.width+150/2));
+			item.screenCenter(X);
+			item.x -= (150/2);
 			item.y = ((item.targetY - lerpSelected) * 1.3 * item.distancePerItem.y) + item.startPosition.y;
 
 			var icon:HealthIcon = iconArray[i];
