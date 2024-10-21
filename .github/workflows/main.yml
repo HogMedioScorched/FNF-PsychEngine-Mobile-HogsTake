@@ -1,7 +1,7 @@
 name: Main
 on: workflow_dispatch
 jobs:
-  La_PC_de_MrPapu:
+  Desktop:
     runs-on: ${{matrix.os}}
     strategy:
       fail-fast: false
@@ -80,7 +80,7 @@ jobs:
           name: macOSBuild-arm64
           path: export/release/macos/bin/*
           if-no-files-found: error
-  La_Tablet_de_Bambi:
+  Mobile:
     runs-on: ${{matrix.os}}
     strategy:
       fail-fast: false
