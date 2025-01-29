@@ -7,7 +7,7 @@ import objects.Alphabet;
 
 class VisualsSettingsSubState extends BaseOptionsMenu
 {
-	public static var pauseMusics:Array<String> = ['None', 'Tea Time', 'Breakfast', 'Breakfast (Pico)', 'Creative Exercise'];
+	public static var pauseMusics:Array<String> = ['None', 'Tea Time', 'Breakfast', 'Breakfast (Pico)', 'CreativeExercise'];
 	var noteOptionID:Int = -1;
 	var notes:FlxTypedGroup<StrumNote>;
 	var splashes:FlxTypedGroup<NoteSplash>;
